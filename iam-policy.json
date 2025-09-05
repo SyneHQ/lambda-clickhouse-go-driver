@@ -1,0 +1,17 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:InvokeFunctionUrl",
+                "lambda:InvokeFunction",
+                "lambda:GetFunction",
+                "lambda:GetFunctionUrlConfig",
+                "lambda:InvokeAsync"
+            ],
+            "Resource": "arn:aws:lambda:us-east-1:567589086885:function:ClickhouseLambdaStack-ClickhouseLambda3697569D-iktHR8bNJ4BS"
+        }
+    ]
+}
