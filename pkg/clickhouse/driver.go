@@ -7,6 +7,7 @@ import (
 	"database/sql/driver"
 	"fmt"
 	"net/url"
+	"os"
 	"strings"
 
 	awsconfig "github.com/aws/aws-sdk-go-v2/config"
@@ -114,6 +115,17 @@ func parseDSN(dsn string) (*Config, error) {
 	accessKeyID := queryParams.Get("aws_access_key_id")
 	secretAccessKey := queryParams.Get("aws_secret_access_key")
 	sessionToken := queryParams.Get("aws_session_token")
+
+	// Fallback to environment variables if credentials not provided in DSN
+	// These environment variables can be set when using Lambda execution roles
+	// or when credentials are managed externally
+	if secretAccessKey == "" {
+		secretAccessKey = os.Getenv("LAMBDA_CLICKHOUSE_ROLE_AWS_SECRET_ACCESS_KEY")
+	}
+
+	if accessKeyID == "" {
+		accessKeyID = os.Getenv("LAMBDA_CLICKHOUSE_ROLE_AWS_ACCESS_KEY_ID")
+	}
 
 	return &Config{
 		FunctionName:    functionName,
