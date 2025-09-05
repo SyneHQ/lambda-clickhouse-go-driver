@@ -89,8 +89,15 @@ dsn := "clickhouse-lambda://function@region/bucket/path"
 
 ### 2. Environment Variables
 ```bash
+# Standard AWS credentials
 export AWS_ACCESS_KEY_ID=your_access_key
 export AWS_SECRET_ACCESS_KEY=your_secret_key
+
+# or use driver-specific environment variables
+export LAMBDA_CLICKHOUSE_ROLE_AWS_SECRET_ACCESS_KEY=your_secret_key
+export LAMBDA_CLICKHOUSE_ROLE_AWS_ACCESS_KEY_ID=your_access_key
+
+# Set the AWS region
 export AWS_REGION=us-east-1
 ```
 
