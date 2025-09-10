@@ -4,7 +4,7 @@ go 1.23
 
 toolchain go1.24.4
 
-require github.com/synehq/lambda-clickhouse-go-driver v0.0.0
+require github.com/synehq/lambda-clickhouse-go-driver v1.0.0
 
 require (
 	github.com/aws/aws-sdk-go-v2 v1.24.0 // indirect
