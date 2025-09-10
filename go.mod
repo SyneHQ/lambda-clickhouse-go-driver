@@ -1,6 +1,8 @@
 module github.com/synehq/lambda-clickhouse-go-driver/pkg/clickhouse
 
-go 1.21
+toolchain go1.23.4
+
+go 1.23
 
 require (
 	github.com/aws/aws-sdk-go-v2/config v1.26.1
