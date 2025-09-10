@@ -1,4 +1,4 @@
-module clickhouse-lambda-driver
+module github.com/synehq/lambda-clickhouse-go-driver/pkg/clickhouse
 
 go 1.21
 
