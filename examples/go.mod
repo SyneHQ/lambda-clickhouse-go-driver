@@ -1,8 +1,10 @@
 module examples
 
-go 1.21
+go 1.23
 
-require clickhouse-lambda-driver v0.0.0
+toolchain go1.24.4
+
+require github.com/synehq/lambda-clickhouse-go-driver v0.0.0
 
 require (
 	github.com/aws/aws-sdk-go-v2 v1.24.0 // indirect
@@ -23,4 +25,4 @@ require (
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 )
 
-replace clickhouse-lambda-driver => ../
+replace github.com/synehq/lambda-clickhouse-go-driver => ../

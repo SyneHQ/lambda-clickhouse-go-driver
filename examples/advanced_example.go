@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	_ "clickhouse-lambda-driver/pkg/clickhouse"
+	_ "github.com/synehq/lambda-clickhouse-go-driver/pkg/clickhouse"
 )
 
 func main() {

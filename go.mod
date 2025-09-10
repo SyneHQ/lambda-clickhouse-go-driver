@@ -1,4 +1,4 @@
-module github.com/synehq/lambda-clickhouse-go-driver/pkg/clickhouse
+module github.com/synehq/lambda-clickhouse-go-driver
 
 toolchain go1.23.4
 
